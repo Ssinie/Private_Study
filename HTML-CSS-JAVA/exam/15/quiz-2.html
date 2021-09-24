@@ -1,0 +1,22 @@
+<html>
+  <title>숫자비교</title>
+</html>
+<script>
+  var Num1 = parseInt(prompt("비교할 첫 번째 숫자", ""));
+  var Num2 = parseInt(prompt("비교할 두 번째 숫자", ""));
+  function checkNum(x, y) {
+    console.log(x + "   " + y);
+    console.log(x > y);
+    if (x > y) {
+      alert(x +" 이(가)" + y + " 보다 큽니다.");
+      console.log("x가 큼");
+    } else if(y > x) {
+      alert(y +" 이(가)" + x + " 보다 큽니다.");
+      console.log("y가 큼");
+    } else if(x === y) {
+      alert("두 수가 같습니다.");
+    }
+  }
+
+  checkNum(Num1, Num2);
+</script>

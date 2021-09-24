@@ -1,0 +1,21 @@
+<html>
+  <title>이미지 정보</title>
+  <body>
+    <div id="prod-pic">
+      <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" onclick="displaySrc()">
+    </div>
+  </body>
+</html>
+
+<script>
+  function displaySrc() {
+    var cup = document.querySelector("#cup");
+    alert("이미지 소스: " + cup.getAttribute("src"));
+  }
+</script>
+<style>
+  #cup {
+    width: 200;
+    height: 200;
+  }
+</style>

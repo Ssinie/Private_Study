@@ -1,0 +1,16 @@
+<child-component v-on:show-log="printText"></child-component>
+
+여기서 잘 보면 위 내용은 아래와 같다.
+<v-on:show-log="printText"><button v-on:click="showLog">show</button></v-on>
+
+여기서 클릭을 하게 되면. showLog 함수를 실행하고, showLog 는 'this.$emit('show-log')'를 실행하게 된다.
+
+<v-on:show-log="printText"><button this.$emit('show-log')>show</button></v-on>
+
+이 show-log는 바깥의 show-log를 실행시키게 되고, 'printText'를 실행하게 된다.
+
+printText: function() {
+            console.log("received an event");
+          }
+
+이런 절차를 거쳐 콘솔로그가 찍히게 된다.

@@ -1,0 +1,9 @@
+h1 {
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+}
+/* 타입 지정 CSS 선택자 */
+p {
+  font-style: italic;
+}

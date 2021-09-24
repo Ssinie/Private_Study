@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <ul>
+      <li><a href="#" onclick="changeBg('Green')">Green</a></li>
+      <li><a href="#" onclick="changeBg('Orange')">Orange</a></li>
+      <li><a href="#" onclick="changeBg('Purple')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+  </body>
+</html>
+<link rel="stylesheet" href="css/function.css">
+<script>
+  function changeBg(color){
+    var result = document.querySelector('#result');
+    result.style.backgroundColor = color;
+  }
+</script>

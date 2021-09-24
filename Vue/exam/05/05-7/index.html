@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Vue Template - Directives</title>
+	</head>
+	<body>
+		<div id="app">
+      <button v-on:click="clickBtn">클릭</button>
+		</br>
+			<b id="lee">{{ name }}</b>
+	</br>
+			<b id="lee1">{{ names[0] }}</b>
+			<b id="lee2">{{ names[1] }}</b>
+			<b id="lee3">{{ names[2] }}</b>
+    </div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+		<script>
+			new Vue({
+        el: '#app',
+				data: {
+					name: '이승준 대표',
+					names: ['이','승','준']
+				},
+        methods: {
+          clickBtn: function(event) {
+            console.log(event);
+          }
+        }
+      });
+		</script>
+	</body>
+</html>
+
+<style>
+#lee{
+	font-size: 250px;
+	color: #dc4ef6;
+}
+#lee1{
+	font-size: 100px;
+	color: #dc4ef0;
+}
+#lee2{
+	font-size: 100px;
+	color: #dc2ef0;
+}
+#lee3{
+	font-size: 100px;
+	color: #dc0ef0;
+}
+</style>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+  <style>
+    form {
+      margin-bottom:30px;
+    }
+    input[type="text"] {
+      width:30px;
+      height:20px;
+      text-align: center;
+    }
+    button {
+      margin-left:10px;
+    }
+    table {
+      width:300px;      
+    }
+    table, td {
+      border:1px solid #ccc;
+      border-collapse: collapse;
+    }
+    td {
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="text" id="rCount" value="5">행   <!-- 줄 -->
+    <input type="text" id="cCount" value="5">열   <!-- 칸 --> 
+    <button onclick="drawTable(); return false;">작성</button>
+  </form>
+  <div id="contents"></div>
+</body>
+</html>
+
+<script>
+  function drawTable() {
+    var hang = document.querySelector("#rCount").value;
+    var youl = document.querySelector("#cCount").value;
+
+    var createTb = document.createElement("Table");
+    for(i = 0 ; i < hang ; i++) {
+      var createTr = document.createElement("tr");
+      for(j = 0; j < youl ; j++) {
+        var createTd = document.createElement("td");
+        var createText = document.createTextNode(i+", "+j);
+        createTd.appendChild(createText);
+        createTr.appendChild(createTd);
+      }
+      createTb.appendChild(createTr);
+    }
+    // itemList.appendChild(createTb);
+    document.getElementById("contents").appendChild(createTb);
+  }
+</script>

@@ -1,0 +1,27 @@
+<html>
+  <title>현재시간 확인</title>
+  <body>
+    <p>현재 시각 <span id="current" class="display"></span></p>
+  </body>
+</html>
+<script>
+  setInterval(displayNow, 1000);
+
+  function displayNow() {
+    var dateTime = new Date();
+    var currentTime = dateTime.toLocaleString();
+    document.querySelector("#current").innerHTML = currentTime;
+  }
+</script>
+<style>
+  p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .display {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;  
+  }
+</style>

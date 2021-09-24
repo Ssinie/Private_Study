@@ -1,0 +1,51 @@
+<html>
+  <head>
+  </head>
+  <body>
+    
+  </body>
+</html>
+<script>
+  /* memNum - 인원 수
+   * colNum - 한 줄에 앉힐 인원
+  */
+  // var memNum = prompt ("인원 수를 입력하세요.(숫자)", "");
+  // var colNum = prompt ("한 줄에 앉힐 인원 수를 입력하세요.(숫자)", "");
+
+  var memNum = 56;
+  var colNum = 6;
+
+  if(memNum % colNum === 0) {
+    var rowNum = parseInt(memNum / colNum);
+  } else {
+    rowNum = parseInt(memNum / colNum) + 1;
+  }
+  // document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+
+  var idx1, idx2;
+
+  document.write("<table>");
+  for(idx1 = 0; idx1 < rowNum; idx1++) {
+    document.write("<tr>");
+    for(idx2 = 1; idx2 <= colNum; idx2++) {
+      seatNo = idx1 * colNum + idx2; // 좌석번호
+      if (seatNo > memNum) break;
+      document.write("<td>");
+      document.write("" + seatNo + " ");
+      document.write("</td>");
+    }
+    document.write("</tr>");
+    document.write("<br>");
+  }
+  document.write("</table>")
+</script>
+<style>
+  table, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+  }
+  td {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+</style>

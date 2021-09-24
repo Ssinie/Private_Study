@@ -1,0 +1,20 @@
+<html>
+  <title>DOM 객체이동</title>
+  <body>
+    <button onclick="inntext()">innerText로 표시하기</button>
+    <button onclick="innhtml()">innerHtml로 표시하기</button>
+    <h1>현재 시각: </h1>
+    <div id="current"></div>
+  </body>
+</html>
+
+<script>
+  var now = new Date();
+
+  function inntext() {
+    document.getElementById("current").innerText = now;
+  }
+  function innhtml() {
+    document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+  }
+</script>

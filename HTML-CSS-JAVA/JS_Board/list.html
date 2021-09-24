@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <title>Board</title>
+  <head>
+  </head>
+  <body>
+    
+  </body>
+</html>
+<script type="text/javascript" src="data.js"></script>
+<script>
+  document.write("<table>");
+  document.write("<tr>");
+  document.write("<td>번호</td>");
+  document.write("<td>제목</td>");
+  document.write("</tr>");
+  var nums = data.boardList;
+  // console.log(nums)
+  for (var i = 0 ; i < nums.length ; i++) {
+    document.write("<tr>");
+    document.write("<td>"+nums[i].num+"</td>");
+    document.write("<td>"+nums[i].title+"</td>");
+    document.write("</tr>");
+    // console.log("key : " + key + ", value : " + key.num)
+  }
+  document.write("</table>");
+</script>
+
+<style>
+  table {
+    border: 5px;
+    table-layout: auto;
+    border-color: black;
+    background-color: gray;
+    width: auto;
+    height: auto;
+    margin: 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+</style>

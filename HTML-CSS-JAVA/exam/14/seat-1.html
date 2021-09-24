@@ -1,0 +1,21 @@
+<html>
+  <head>
+  </head>
+  <body>
+    
+  </body>
+</html>
+<script>
+  /* memNum - 인원 수
+   * colNum - 한 줄에 앉힐 인원
+  */
+  var memNum = prompt ("인원 수를 입력하세요.(숫자)", "");
+  var colNum = prompt ("한 줄에 앉힐 인원 수를 입력하세요.(숫자)", "");
+
+  if(memNum % colNum === 0) {
+    var rowNum = parseInt(memNum / colNum);
+  } else {
+    rowNum = parseInt(memNum / colNum) + 1;
+  }
+  document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+</script>
